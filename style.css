@@ -1,0 +1,21 @@
+/* Remove margens padrão do corpo */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+}
+
+/* Define o header para ocupar a largura completa */
+header {
+    width: 100%;
+    height: auto; /* A altura será ajustada automaticamente */
+    position: relative; /* Permite adicionar sobreposições no futuro */
+    overflow: hidden; /* Garante que o vídeo não ultrapasse o header */
+}
+
+/* Estiliza o vídeo */
+header video {
+    width: 100%; /* Ocupa toda a largura do header */
+    height: auto; /* Ajusta proporcionalmente a altura */
+    object-fit: cover; /* Faz o vídeo cobrir o espaço disponível sem distorções */
+}
