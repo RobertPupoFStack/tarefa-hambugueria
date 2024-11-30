@@ -2,20 +2,149 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+    overflow-x: hidden;
+    height: 100%; /* Necessário para o alinhamento */
+    display: flex;
+    flex-direction: column; /* Elementos alinhados verticalmente */
 }
 
-/* Define o header para ocupar a largura completa */
+/* Estilização do header */
 header {
     width: 100%;
-    height: auto; /* A altura será ajustada automaticamente */
-    position: relative; /* Permite adicionar sobreposições no futuro */
-    overflow: hidden; /* Garante que o vídeo não ultrapasse o header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Começa no topo */
 }
 
-/* Estiliza o vídeo */
+#container{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra do topo */
+#head {
+    width: 100%;
+    background-color: #7E0404;
+    text-align: center;
+    padding: 8px 0;
+}
+
+#nome {
+    font-weight: bold;
+    color: #FFFF;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+
+/* Vídeo */
 header video {
-    width: 100%; /* Ocupa toda a largura do header */
-    height: auto; /* Ajusta proporcionalmente a altura */
-    object-fit: cover; /* Faz o vídeo cobrir o espaço disponível sem distorções */
+    width: 100%; /* Ocupa 100% da largura */
+    max-height: 400px; /* Altura máxima para responsividade */
+    object-fit: cover; /* Ajuste proporcional */
+}
+
+/* Seção do cardápio */
+#caixa {
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center;
+}
+
+#caixa h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilização do card */
+#card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre itens */
+    border: #DFDBDB solid 2px;
+    width: 295px;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.imagem {
+    width: 100%;
+    max-width: 295px;
+    height: auto; /* Mantém proporção da imagem */
+    
+}
+
+#card-descricao {
+    font-size: 22px;
+    margin: 10px 0;
+    width: 252px ;
+    height: auto;
+    border: #DFDBDB solid 2px;
+}
+
+#descrição {
+    
+    color: #666;
+    width: 252px ;
+    height: auto;
+    background-color: #FDEB23;
+}
+
+#p-descricao{
+    font-size: 30px;
+}
+
+#card-descricao h2 {
+    font-size: 20px;
+    color: #7E0404;
+}
+
+/* Botão */
+#botao {
+    width: 182px;
+    height: 47px;
+    background-color: red;
+    border-radius: 5%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: white;
+    border: black solid 2px;
+    font-weight: bold;
+    
+}
+
+#botao:hover {
+    background-color: #7E0404;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #nome {
+        font-size: 30px;
+    }
+
+    header video {
+        max-height: 300px; /* Ajusta altura do vídeo */
+    }
+
+
+    #descrição p {
+        font-size: 30px;
+    }
+
+    
 }
