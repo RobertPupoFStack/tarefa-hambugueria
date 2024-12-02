@@ -50,7 +50,8 @@ header video {
 /* Seção do cardápio */
 #caixa {
     margin-top: 20px;
-    border: 2px solid black;
+    margin-bottom: 40px;
+    border: 2px solid rgb(206, 203, 203);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -81,9 +82,9 @@ header video {
 }
 
 .imagem {
-    width: 100%;
+    width: 295px;
     max-width: 295px;
-    height: auto; /* Mantém proporção da imagem */
+    height: 275px; /* Mantém proporção da imagem */
     
 }
 
